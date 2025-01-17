@@ -29,7 +29,8 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: $NODE_VERSION
+          node-version: ${{ env.NODE_VERSION }}
+
       # Runs a single command using the runners shell
 
       - name: variables 
