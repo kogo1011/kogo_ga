@@ -67,3 +67,6 @@ jobs:
 
       - name: output the git repo variable
         run: echo "${{ vars.NAME }}"
+
+      - name: repo variables 
+        run:  echo "${{ toJson(vars) }}"
