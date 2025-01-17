@@ -30,11 +30,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
-
+      
+          # Runs a single command using the runners shell
       - name: placeholder for env-var
         run: echo $NODE_VERSION  
-
-      # Runs a single command using the runners shell
 
       - name: variables 
         run:  echo "${{ toJson(github) }}"
@@ -53,3 +52,15 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+  mustard:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+    
+      - name: placeholder for env-var
+        run: echo $NODE_VERSION  
